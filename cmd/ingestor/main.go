@@ -18,7 +18,7 @@ func main() {
         broker = flag.String("broker", os.Getenv("KAFKA_BROKER"), "Kafka broker address")
         topic  = flag.String("topic", "flight_updates", "Kafka topic for flight data")
         url    = flag.String("url", "", "OpenSky API URL (optional)")
-        interval = flag.Duration("interval", 2*time.Minute, "Poll interval")
+        interval = flag.Duration("interval", 10 * time.Second, "Poll interval")
     )
     flag.Parse()
 

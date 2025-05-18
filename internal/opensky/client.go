@@ -5,7 +5,6 @@ import (
     "encoding/json"
     "net/http"
     "time"
-	"log"
     "github.com/yeonjoon13/Flight-Collision-Tracker/internal/model"
 )
 
@@ -37,7 +36,6 @@ func FetchStates(ctx context.Context, url string) ([]model.FlightUpdate, error) 
 
 	getFloat := func(v interface{}) float64 {
         if v == nil {
-			log.Printf("hello")
             return 0
         }
         f, ok := v.(float64)
